@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard SSKD PPD Sandakan 2026</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-100 text-slate-800 antialiased min-h-screen pb-12">
+
+    <!-- Header / Navbar -->
+    <header class="bg-indigo-900 text-white shadow-xl sticky top-0 z-50 border-b border-indigo-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex items-center space-x-3">
+                <div class="p-2.5 bg-amber-400 text-indigo-950 rounded-xl font-black text-2xl shadow-inner">
+                    <i class="fa-solid fa-chart-pie"></i>
+                </div>
+                <div>
+                    <h1 class="text-xl md:text-2xl font-extrabold tracking-tight">DASHBOARD SSKD PEJABAT PENDIDIKAN DAERAH SANDAKAN 2026</h1>
+                    <p class="text-xs md:text-sm text-indigo-200 font-light">Status Pengisian Senarai Semak Kompetensi Diri[cite: 1]</p>
+                </div>
+            </div>
+            <div class="bg-indigo-800/80 px-4 py-2 rounded-xl border border-indigo-700/60 text-right">
+                <p class="text-[10px] uppercase font-bold tracking-wider text-indigo-300">Kemaskini Sumber</p>
+                <p class="text-xs font-semibold text-amber-300"><i class="fa-regular fa-clock mr-1"></i> 12/10/2026 @ 5:00 PM[cite: 1]</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+
+        <!-- RINGKASAN KPI DAERAH -->
+        <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <!-- Card 1: Sasaran Guru -->
+            <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200/80 flex items-center justify-between hover:shadow-md transition">
+                <div>
+                    <p class="text-xs font-bold text-slate-400 uppercase tracking-wider">SASARAN GURU[cite: 1]</p>
+                    <h3 class="text-3xl font-extrabold text-slate-800 mt-1">3,121[cite: 1]</h3>
+                    <p class="text-xs text-slate-400 mt-1">Orang[cite: 1]</p>
+                </div>
+                <div class="w-12 h-12 rounded-2xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-xl font-bold">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+            </div>
+
+            <!-- Card 2: Selesai Mengisi -->
+            <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200/80 flex items-center justify-between hover:shadow-md transition">
+                <div>
+                    <p class="text-xs font-bold text-slate-400 uppercase tracking-wider">SELESAI MENGISI[cite: 1]</p>
+                    <h3 class="text-3xl font-extrabold text-emerald-600 mt-1">1,791[cite: 1]</h3>
+                    <p class="text-xs text-emerald-600 font-semibold mt-1"><i class="fa-solid fa-circle-check mr-1"></i>(57.39%)[cite: 1]</p>
+                </div>
+                <div class="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-xl font-bold">
+                    <i class="fa-solid fa-user-check"></i>
+                </div>
+            </div>
+
+            <!-- Card 3: Belum Mengisi -->
+            <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200/80 flex items-center justify-between hover:shadow-md transition">
+                <div>
+                    <p class="text-xs font-bold text-slate-400 uppercase tracking-wider">BELUM MENGISI[cite: 1]</p>
+                    <h3 class="text-3xl font-extrabold text-rose-600 mt-1">1,330[cite: 1]</h3>
+                    <p class="text-xs text-rose-600 font-semibold mt-1"><i class="fa-solid fa-triangle-exclamation mr-1"></i>(42.61%)[cite: 1]</p>
+                </div>
+                <div class="w-12 h-12 rounded-2xl bg-rose-50 text-rose-600 flex items-center justify-center text-xl font-bold">
+                    <i class="fa-solid fa-user-xmark"></i>
+                </div>
+            </div>
+
+            <!-- Card 4: Jumlah Sekolah -->
+            <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200/80 flex items-center justify-between hover:shadow-md transition">
+                <div>
+                    <p class="text-xs font-bold text-slate-400 uppercase tracking-wider">JUMLAH SEKOLAH[cite: 1]</p>
+                    <h3 class="text-3xl font-extrabold text-amber-500 mt-1">86[cite: 1]</h3>
+                    <p class="text-xs text-slate-400 mt-1">Sekolah[cite: 1]</p>
+                </div>
+                <div class="w-12 h-12 rounded-2xl bg-amber-50 text-amber-500 flex items-center justify-center text-xl font-bold">
+                    <i class="fa-solid fa-school"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- VISUALISASI CARTA -->
+        <section class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <!-- Donut Chart: Peratus PPD -->
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200/80 lg:col-span-1 flex flex-col justify-between">
+                <div>
+                    <h3 class="text-base font-bold text-slate-800 flex items-center gap-2">
+                        <i class="fa-solid fa-chart-donut text-indigo-600"></i> CARTA DONUT: PERATUS PPD[cite: 1]
+                    </h3>
+                    <p class="text-xs text-slate-400 mt-0.5">Memaparkan nisbah pengisian sasaran keseluruhan[cite: 1]</p>
+                </div>
+                <div class="relative flex justify-center items-center h-60 my-4">
+                    <canvas id="ppdOverallChart"></canvas>
+                </div>
+                <div class="grid grid-cols-2 gap-2 text-center text-xs font-semibold pt-2 border-t border-slate-100">
+                    <div class="bg-emerald-50 text-emerald-700 py-2 rounded-lg">
+                        🟢 Selesai (1,791)[cite: 1]
+                    </div>
+                    <div class="bg-rose-50 text-rose-700 py-2 rounded-lg">
+                        🔴 Belum Selesai (1,330)[cite: 1]
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bar Chart: Taburan Kategori Sekolah -->
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200/80 lg:col-span-2 flex flex-col justify-between">
+                <div>
+                    <h3 class="text-base font-bold text-slate-800 flex items-center gap-2">
+                        <i class="fa-solid fa-chart-column text-indigo-600"></i> CARTA BAR: TABURAN KATEGORI SEKOLAH[cite: 1]
+                    </h3>
+                    <p class="text-xs text-slate-400 mt-0.5">Membahagikan pencapaian 86 buah sekolah kepada 3 kumpulan utama[cite: 1]</p>
+                </div>
+                <div class="relative h-64 my-2">
+                    <canvas id="categoryChart"></canvas>
+                </div>
+                <div class="flex flex-wrap justify-around text-xs text-slate-500 pt-2 border-t border-slate-100">
+                    <span>🟢 <strong>Cemerlang:</strong> (>80%)[cite: 1]</span>
+                    <span>🟡 <strong>Sederhana:</strong> (50-79%)[cite: 1]</span>
+                    <span>🔴 <strong>Tindakan:</strong> (<50%)[cite: 1]</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTROL & JADUAL DATA SEKOLAH -->
+        <section class="bg-white rounded-2xl shadow-sm border border-slate-200/80 overflow-hidden">
+            <!-- Header Controls -->
+            <div class="p-6 border-b border-slate-100 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 bg-slate-50/50">
+                <div>
+                    <h3 class="text-lg font-bold text-slate-800">Senarai Status Pengisian Mengikut Sekolah</h3>
+                    <p class="text-xs text-slate-500 mt-0.5">Gunakan carian teks atau penapis status untuk maklumat khusus[cite: 1].</p>
+                </div>
+
+                <div class="flex flex-col sm:flex-row items-center gap-3 w-full md:w-auto">
+                    <!-- Search Input -->
+                    <div class="relative w-full sm:w-64">
+                        <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-xs"></i>
+                        <input type="text" id="searchInput" onkeyup="filterData()" placeholder="🔍 Cari Sekolah: [ SK / SMK / Kod... ][cite: 1]" 
+                            class="w-full pl-9 pr-4 py-2 text-xs bg-white border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 shadow-sm transition">
+                    </div>
+
+                    <!-- Status Filter -->
+                    <select id="statusFilter" onchange="filterData()" class="w-full sm:w-auto px-3.5 py-2 text-xs bg-white border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 shadow-sm font-medium">
+                        <option value="ALL">📂 Penapis Status: [ Semua Status ▾ ][cite: 1]</option>
+                        <option value="CEMERLANG">🟢 CEMERLANG (>80%)[cite: 1]</option>
+                        <option value="SEDERHANA">🟡 SEDERHANA (50%-79%)[cite: 1]</option>
+                        <option value="PERLU TINDAKAN">🔴 PERLU TINDAKAN (<50%)[cite: 1]</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Table Container -->
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse text-xs">
+                    <thead>
+                        <tr class="bg-slate-100/70 text-slate-600 uppercase font-bold tracking-wider border-b border-slate-200">
+                            <th class="py-3.5 px-4">KOD[cite: 1]</th>
+                            <th class="py-3.5 px-4">NAMA SEKOLAH[cite: 1]</th>
+                            <th class="py-3.5 px-4 text-center">SASARAN[cite: 1]</th>
+                            <th class="py-3.5 px-4 text-center">SELESAI[cite: 1]</th>
+                            <th class="py-3.5 px-4 text-center">BELUM[cite: 1]</th>
+                            <th class="py-3.5 px-4 text-center">% SELESAI[cite: 1]</th>
+                            <th class="py-3.5 px-4 text-center">% BELUM[cite: 1]</th>
+                            <th class="py-3.5 px-4 text-center">STATUS[cite: 1]</th>
+                        </tr>
+                    </thead>
+                    <tbody id="schoolTableBody" class="divide-y divide-slate-100 text-slate-700">
+                        <!-- Content populated dynamically -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Table Footer -->
+            <div class="p-4 bg-slate-50 border-t border-slate-200 flex justify-between items-center text-xs text-slate-500">
+                <span>Menunjukkan <strong id="visibleCount" class="text-slate-800">0</strong> daripada 86 buah sekolah[cite: 1]</span>
+                <span class="text-[11px] text-slate-400">PPD Sandakan © 2026</span>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- JavaScript Data & Functionalities -->
+    <script>
+        // Data Rasmi 86 Sekolah SSKD PPD Sandakan 2026
+        const rawSchoolData = [
+            { kod: "XEA2086", nama: "SEKOLAH MENENGAH KEBANGSAAN BATU SAPI II", sasaran: 27, selesai: 26, belum: 1, pSelesai: 96.30, pBelum: 3.70, status: "CEMERLANG" },
+            { kod: "XBC2004", nama: "SJK(C) CHENG MIN", sasaran: 23, selesai: 23, belum: 0, pSelesai: 100.00, pBelum: 0.00, status: "CEMERLANG" },
+            { kod: "XCC2006", nama: "SJK(C) CHI HWA", sasaran: 46, selesai: 46, belum: 0, pSelesai: 100.00, pBelum: 0.00, status: "CEMERLANG" },
+            { kod: "XCC2016", nama: "SJK(C) MING CHUNG", sasaran: 13, selesai: 13, belum: 0, pSelesai: 100.00, pBelum: 0.00, status: "CEMERLANG" },
+            { kod: "XCC2020", nama: "SJK(C) PEA WHA", sasaran: 16, selesai: 14, belum: 2, pSelesai: 87.50, pBelum: 12.50, status: "CEMERLANG" },
+            { kod: "XCC2022", nama: "SJK(C) PEI YING", sasaran: 18, selesai: 16, belum: 2, pSelesai: 88.89, pBelum: 11.11, status: "CEMERLANG" },
+            { kod: "XCC2056", nama: "SJK(C) SYN HUA", sasaran: 37, selesai: 34, belum: 3, pSelesai: 91.89, pBelum: 8.11, status: "CEMERLANG" },
+            { kod: "XCC2058", nama: "SJK(C) TAI TONG", sasaran: 34, selesai: 34, belum: 0, pSelesai: 100.00, pBelum: 0.00, status: "CEMERLANG" },
+            { kod: "XCC2063", nama: "SJK(C) YUK CHOI", sasaran: 31, selesai: 28, belum: 3, pSelesai: 90.32, pBelum: 9.68, status: "CEMERLANG" },
+            { kod: "XBA2001", nama: "SK BAMBANGAN", sasaran: 15, selesai: 15, belum: 0, pSelesai: 100.00, pBelum: 0.00, status: "CEMERLANG" },
+            { kod: "XBA2003", nama: "SK BONGON BESAR", sasaran: 6, selesai: 6, belum: 0, pSelesai: 100.00, pBelum: 0.00, status: "CEMERLANG" },
+            { kod: "XBA2090", nama: "SK KG PERTANIAN", sasaran: 19, selesai: 17, belum: 2, pSelesai: 89.47, pBelum: 10.53, status: "CEMERLANG" },
+            { kod: "XBA2080", nama: "SK PAMAGUAN", sasaran: 8, selesai: 8, belum: 0, pSelesai: 100.00, pBelum: 0.00, status: "CEMERLANG" },
+            { kod: "XBA2018", nama: "SK RANCANGAN LUBUH", sasaran: 16, selesai: 13, belum: 3, pSelesai: 81.25, pBelum: 18.75, status: "CEMERLANG" },
+            { kod: "XBA2013", nama: "SK SAKILAN DESA", sasaran: 17, selesai: 14, belum: 3, pSelesai: 82.35, pBelum: 17.65, status: "CEMERLANG" },
+            { kod: "XBA2033", nama: "SK SEGALIUD", sasaran: 29, selesai: 29, belum: 0, pSelesai: 100.00, pBelum: 0.00, status: "CEMERLANG" },
+            { kod: "XBA2036", nama: "SK SIBUGAL BESAR", sasaran: 30, selesai: 28, belum: 2, pSelesai: 93.33, pBelum: 6.67, status: "CEMERLANG" },
+            { kod: "XBA2002", nama: "SK SRI TANJUNG PAPAT 1", sasaran: 55, selesai: 45, belum: 10, pSelesai: 81.82, pBelum: 18.18, status: "CEMERLANG" },
+            { kod: "XCA2047", nama: "SK ST MONICA", sasaran: 42, selesai: 34, belum: 8, pSelesai: 80.95, pBelum: 19.05, status: "CEMERLANG" },
+            { kod: "XCA2039", nama: "SK ST GABRIEL", sasaran: 25, selesai: 22, belum: 3, pSelesai: 88.00, pBelum: 12.00, status: "CEMERLANG" },
+            { kod: "XCA2041", nama: "SK ST MARY CONVENT", sasaran: 40, selesai: 40, belum: 0, pSelesai: 100.00, pBelum: 0.00, status: "CEMERLANG" },
+            { kod: "XCA2043", nama: "SK ST MARY LABUK (M)", sasaran: 16, selesai: 16, belum: 0, pSelesai: 100.00, pBelum: 0.00, status: "CEMERLANG" },
+            { kod: "XCA2042", nama: "SK ST MARY TOWN (M)", sasaran: 39, selesai: 37, belum: 2, pSelesai: 94.87, pBelum: 5.13, status: "CEMERLANG" },
+            { kod: "XCA2053", nama: "SK SUNG SIEW", sasaran: 51, selesai: 48, belum: 3, pSelesai: 94.12, pBelum: 5.88, status: "CEMERLANG" },
+            { kod: "XBA2005", nama: "SK SUNGAI PADAS", sasaran: 32, selesai: 29, belum: 3, pSelesai: 90.63, pBelum: 9.38, status: "CEMERLANG" },
+            { kod: "XBA2076", nama: "SK TANJONG BATU", sasaran: 15, selesai: 14, belum: 1, pSelesai: 93.33, pBelum: 6.67, status: "CEMERLANG" },
+            { kod: "XBA2085", nama: "SK TERUSAN BARU", sasaran: 12, selesai: 10, belum: 2, pSelesai: 83.33, pBelum: 16.67, status: "CEMERLANG" },
+            { kod: "XBA2094", nama: "SK TINUSA", sasaran: 62, selesai: 54, belum: 8, pSelesai: 87.10, pBelum: 12.90, status: "CEMERLANG" },
+            { kod: "XBA2062", nama: "SK ULU DUSUN", sasaran: 27, selesai: 27, belum: 0, pSelesai: 100.00, pBelum: 0.00, status: "CEMERLANG" },
+            { kod: "XEA2083", nama: "SMK ELOPURA DUA", sasaran: 87, selesai: 81, belum: 6, pSelesai: 93.10, pBelum: 6.90, status: "CEMERLANG" },
+            { kod: "XEA2074", nama: "SMK GUMGUM", sasaran: 44, selesai: 42, belum: 2, pSelesai: 95.45, pBelum: 4.55, status: "CEMERLANG" },
+            { kod: "XEA2075", nama: "SMK MUHIBBAH", sasaran: 89, selesai: 75, belum: 14, pSelesai: 84.27, pBelum: 15.73, status: "CEMERLANG" },
+            { kod: "XEA2084", nama: "SMK SANDAKAN DUA", sasaran: 72, selesai: 72, belum: 0, pSelesai: 100.00, pBelum: 0.00, status: "CEMERLANG" },
+            { kod: "XEA2076", nama: "SMK TAMAN FAJAR", sasaran: 52, selesai: 49, belum: 3, pSelesai: 94.23, pBelum: 5.77, status: "CEMERLANG" },
+            { kod: "XCC2013", nama: "SJK(C) LOK YUK", sasaran: 19, selesai: 14, belum: 5, pSelesai: 73.68, pBelum: 26.32, status: "SEDERHANA" },
+            { kod: "XCC2023", nama: "SJK(C) PUY GIN", sasaran: 48, selesai: 35, belum: 13, pSelesai: 72.92, pBelum: 27.08, status: "SEDERHANA" },
+            { kod: "XBA2004", nama: "SK BANDAR", sasaran: 42, selesai: 23, belum: 19, pSelesai: 54.76, pBelum: 45.24, status: "SEDERHANA" },
+            { kod: "XBA2008", nama: "SK BATU 16 GUM-GUM", sasaran: 40, selesai: 30, belum: 10, pSelesai: 75.00, pBelum: 25.00, status: "SEDERHANA" },
+            { kod: "XBA2010", nama: "SK GAS", sasaran: 69, selesai: 43, belum: 26, pSelesai: 62.32, pBelum: 37.68, status: "SEDERHANA" },
+            { kod: "XBA2009", nama: "SK GUM-GUM KECIL", sasaran: 16, selesai: 12, belum: 4, pSelesai: 75.00, pBelum: 25.00, status: "SEDERHANA" },
+            { kod: "XBA2050", nama: "SK KEM TENTERA", sasaran: 54, selesai: 43, belum: 11, pSelesai: 79.63, pBelum: 20.37, status: "SEDERHANA" },
+            { kod: "XBA2084", nama: "SK MUHIBBAH", sasaran: 71, selesai: 52, belum: 19, pSelesai: 73.24, pBelum: 26.76, status: "SEDERHANA" },
+            { kod: "XBA2017", nama: "SK MUMIANG", sasaran: 12, selesai: 6, belum: 6, pSelesai: 50.00, pBelum: 50.00, status: "SEDERHANA" },
+            { kod: "XBA2025", nama: "SK PULAU SANGHAI", sasaran: 16, selesai: 10, belum: 6, pSelesai: 62.50, pBelum: 37.50, status: "SEDERHANA" },
+            { kod: "XBA2026", nama: "SK PULAU TIMBANG", sasaran: 20, selesai: 14, belum: 6, pSelesai: 70.00, pBelum: 30.00, status: "SEDERHANA" },
+            { kod: "XBA2082", nama: "SK SG ANIB 2", sasaran: 40, selesai: 24, belum: 16, pSelesai: 60.00, pBelum: 40.00, status: "SEDERHANA" },
+            { kod: "XBA2083", nama: "SK SRI TANJUNG PAPAT 2", sasaran: 31, selesai: 22, belum: 9, pSelesai: 70.97, pBelum: 29.03, status: "SEDERHANA" },
+            { kod: "XBA2093", nama: "SK SUNGAI ANIB III", sasaran: 58, selesai: 45, belum: 13, pSelesai: 77.59, pBelum: 22.41, status: "SEDERHANA" },
+            { kod: "XBA2079", nama: "SK SUNGAI KAYU", sasaran: 44, selesai: 26, belum: 18, pSelesai: 50.09, pBelum: 40.91, status: "SEDERHANA" },
+            { kod: "XBA2073", nama: "SK SUNGAI TIRAM", sasaran: 15, selesai: 9, belum: 6, pSelesai: 60.00, pBelum: 40.00, status: "SEDERHANA" },
+            { kod: "XFE2037", nama: "SMK KONVEN ST CECILIA", sasaran: 62, selesai: 34, belum: 28, pSelesai: 54.84, pBelum: 45.16, status: "SEDERHANA" },
+            { kod: "XEA2081", nama: "SMK SEGALIUD", sasaran: 56, selesai: 39, belum: 17, pSelesai: 69.64, pBelum: 30.36, status: "SEDERHANA" },
+            { kod: "XFE2045", nama: "SMK ST MICHAEL (M)", sasaran: 48, selesai: 33, belum: 15, pSelesai: 68.75, pBelum: 31.25, status: "SEDERHANA" },
+            { kod: "XEA2085", nama: "SMK TINUSA", sasaran: 55, selesai: 39, belum: 16, pSelesai: 70.91, pBelum: 29.09, status: "SEDERHANA" },
+            { kod: "XEA2073", nama: "KOLEJ TINGKATAN ENAM DATUK PENGIRAN GALPAM", sasaran: 87, selesai: 30, belum: 57, pSelesai: 34.48, pBelum: 65.52, status: "PERLU TINDAKAN" },
+            { kod: "XBA2092", nama: "SK BANDAR DUA", sasaran: 50, selesai: 3, belum: 47, pSelesai: 6.00, pBelum: 94.00, status: "PERLU TINDAKAN" },
+            { kod: "XBA2077", nama: "SK BATU PUTIH BARU", sasaran: 42, selesai: 14, belum: 28, pSelesai: 33.33, pBelum: 66.67, status: "PERLU TINDAKAN" },
+            { kod: "XBA2016", nama: "SK KAMPUNG BARU", sasaran: 9, selesai: 2, belum: 7, pSelesai: 22.22, pBelum: 77.78, status: "PERLU TINDAKAN" },
+            { kod: "XBA2011", nama: "SK KARAMUNTING", sasaran: 77, selesai: 16, belum: 61, pSelesai: 20.78, pBelum: 79.22, status: "PERLU TINDAKAN" },
+            { kod: "XBA2088", nama: "SK KG BAHAGIA", sasaran: 39, selesai: 3, belum: 36, pSelesai: 7.69, pBelum: 92.31, status: "PERLU TINDAKAN" },
+            { kod: "XBA2030", nama: "SK LABUK SUBUR", sasaran: 15, selesai: 5, belum: 10, pSelesai: 33.33, pBelum: 66.67, status: "PERLU TINDAKAN" },
+            { kod: "XBA2029", nama: "SK LADANG SANDAK", sasaran: 31, selesai: 1, belum: 30, pSelesai: 3.23, pBelum: 96.77, status: "PERLU TINDAKAN" },
+            { kod: "XCA2040", nama: "SK LUNG MANIS", sasaran: 17, selesai: 2, belum: 15, pSelesai: 11.76, pBelum: 88.24, status: "PERLU TINDAKAN" },
+            { kod: "XBA2091", nama: "SK MAWAR", sasaran: 40, selesai: 6, belum: 34, pSelesai: 15.00, pBelum: 85.00, status: "PERLU TINDAKAN" },
+            { kod: "XBA2089", nama: "SK MERPATI", sasaran: 99, selesai: 40, belum: 59, pSelesai: 40.40, pBelum: 59.60, status: "PERLU TINDAKAN" },
+            { kod: "XBA2019", nama: "SK NUNUYAN LAUT", sasaran: 16, selesai: 3, belum: 13, pSelesai: 18.75, pBelum: 81.25, status: "PERLU TINDAKAN" },
+            { kod: "XBA2081", nama: "SK PITAS", sasaran: 5, selesai: 1, belum: 4, pSelesai: 20.00, pBelum: 80.00, status: "PERLU TINDAKAN" },
+            { kod: "XBA2024", nama: "SK PULAU LIBARAN", sasaran: 12, selesai: 1, belum: 11, pSelesai: 8.33, pBelum: 91.67, status: "PERLU TINDAKAN" },
+            { kod: "XBA2014", nama: "SK PULAU LUBUKAN", sasaran: 12, selesai: 1, belum: 11, pSelesai: 8.33, pBelum: 91.67, status: "PERLU TINDAKAN" },
+            { kod: "XBA2087", nama: "SK SERI MANIS", sasaran: 27, selesai: 10, belum: 17, pSelesai: 37.04, pBelum: 62.96, status: "PERLU TINDAKAN" },
+            { kod: "XBA2069", nama: "SK SIPINONG", sasaran: 12, selesai: 5, belum: 7, pSelesai: 41.67, pBelum: 58.33, status: "PERLU TINDAKAN" },
+            { kod: "XBA2049", nama: "SK SUNGAI ANIB 1", sasaran: 55, selesai: 19, belum: 36, pSelesai: 34.55, pBelum: 65.45, status: "PERLU TINDAKAN" },
+            { kod: "XBA2021", nama: "SK SUNGAI MADANG", sasaran: 8, selesai: 2, belum: 6, pSelesai: 25.00, pBelum: 75.00, status: "PERLU TINDAKAN" },
+            { kod: "XBA2051", nama: "SK SUNGAI MANILA", sasaran: 59, selesai: 17, belum: 42, pSelesai: 28.81, pBelum: 71.19, status: "PERLU TINDAKAN" },
+            { kod: "XBA2086", nama: "SK TAMAN RIMBA", sasaran: 61, selesai: 13, belum: 48, pSelesai: 21.31, pBelum: 78.69, status: "PERLU TINDAKAN" },
+            { kod: "XBA2060", nama: "SK TANJONG ARU", sasaran: 23, selesai: 1, belum: 22, pSelesai: 4.35, pBelum: 95.65, status: "PERLU TINDAKAN" },
+            { kod: "XBA2066", nama: "SK TANJONG PISALI", sasaran: 13, selesai: 6, belum: 7, pSelesai: 46.15, pBelum: 53.85, status: "PERLU TINDAKAN" },
+            { kod: "XEA2072", nama: "SMK BATU SAPI", sasaran: 103, selesai: 13, belum: 90, pSelesai: 12.62, pBelum: 87.38, status: "PERLU TINDAKAN" },
+            { kod: "XEA2071", nama: "SMK ELOPURA", sasaran: 143, selesai: 32, belum: 111, pSelesai: 22.38, pBelum: 77.62, status: "PERLU TINDAKAN" },
+            { kod: "XEA2082", nama: "SMK LIBARAN", sasaran: 47, selesai: 16, belum: 31, pSelesai: 34.04, pBelum: 65.96, status: "PERLU TINDAKAN" },
+            { kod: "XEA2080", nama: "SMK MERPATI", sasaran: 72, selesai: 6, belum: 66, pSelesai: 8.33, pBelum: 91.67, status: "PERLU TINDAKAN" },
+            { kod: "XEA2077", nama: "SMK PEREMPUAN", sasaran: 51, selesai: 22, belum: 29, pSelesai: 43.14, pBelum: 56.86, status: "PERLU TINDAKAN" },
+            { kod: "XEE2031", nama: "SMK SANDAKAN", sasaran: 100, selesai: 32, belum: 68, pSelesai: 32.00, pBelum: 68.00, status: "PERLU TINDAKAN" },
+            { kod: "XFE2044", nama: "SMK ST MARY SANDAKAN", sasaran: 64, selesai: 27, belum: 37, pSelesai: 42.19, pBelum: 57.81, status: "PERLU TINDAKAN" },
+            { kod: "XFE2054", nama: "SMK SUNG SIEW (CF)", sasaran: 69, selesai: 31, belum: 38, pSelesai: 44.93, pBelum: 55.07, status: "PERLU TINDAKAN" },
+            { kod: "XFE2032", nama: "SMK TIONG HUA", sasaran: 73, selesai: 21, belum: 52, pSelesai: 28.77, pBelum: 71.23, status: "PERLU TINDAKAN" }
+        ];
+
+        // Render Data Jadual
+        function renderTable(data) {
+            const tbody = document.getElementById('schoolTableBody');
+            tbody.innerHTML = '';
+
+            data.forEach(item => {
+                let statusBadge = '';
+                if(item.status === 'CEMERLANG') {
+                    statusBadge = `<span class="px-2.5 py-1 rounded-full text-[11px] font-bold bg-emerald-100 text-emerald-800 border border-emerald-200">🟢 CEMERLANG</span>`;
+                } else if(item.status === 'SEDERHANA') {
+                    statusBadge = `<span class="px-2.5 py-1 rounded-full text-[11px] font-bold bg-amber-100 text-amber-800 border border-amber-200">🟡 SEDERHANA</span>`;
+                } else {
+                    statusBadge = `<span class="px-2.5 py-1 rounded-full text-[11px] font-bold bg-rose-100 text-rose-800 border border-rose-200">🔴 TINDAKAN</span>`;
+                }
+
+                const tr = document.createElement('tr');
+                tr.className = "hover:bg-slate-50 transition border-b border-slate-100";
+                tr.innerHTML = `
+                    <td class="py-3 px-4 font-mono font-medium text-slate-500">${item.kod}</td>
+                    <td class="py-3 px-4 font-semibold text-slate-800">${item.nama}</td>
+                    <td class="py-3 px-4 text-center font-medium">${item.sasaran}</td>
+                    <td class="py-3 px-4 text-center font-bold text-emerald-600">${item.selesai}</td>
+                    <td class="py-3 px-4 text-center font-bold text-rose-500">${item.belum}</td>
+                    <td class="py-3 px-4 text-center">
+                        <div class="flex items-center justify-center gap-2">
+                            <span class="font-extrabold text-slate-700">${item.pSelesai.toFixed(2)}%</span>
+                            <div class="w-12 bg-slate-200 rounded-full h-1.5 hidden sm:block overflow-hidden">
+                                <div class="bg-emerald-500 h-1.5 rounded-full" style="width: ${item.pSelesai}%"></div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="py-3 px-4 text-center text-slate-400">${item.pBelum.toFixed(2)}%</td>
+                    <td class="py-3 px-4 text-center">${statusBadge}</td>
+                `;
+                tbody.appendChild(tr);
+            });
+
+            document.getElementById('visibleCount').innerText = data.length;
+        }
+
+        // Tapisan Interaktif (Carian Teks & Dropdown Status)
+        function filterData() {
+            const searchValue = document.getElementById('searchInput').value.toLowerCase();
+            const statusValue = document.getElementById('statusFilter').value;
+
+            const filtered = rawSchoolData.filter(item => {
+                const matchesSearch = item.nama.toLowerCase().includes(searchValue) || item.kod.toLowerCase().includes(searchValue);
+                const matchesStatus = statusValue === 'ALL' || item.status === statusValue;
+                return matchesSearch && matchesStatus;
+            });
+
+            renderTable(filtered);
+        }
+
+        // Inisialisasi Carta & Jadual
+        window.onload = function() {
+            renderTable(rawSchoolData);
+
+            // Donut Chart: Peratus PPD
+            const ctxPie = document.getElementById('ppdOverallChart').getContext('2d');
+            new Chart(ctxPie, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Selesai (57.39%)', 'Belum Selesai (42.61%)'],
+                    datasets: [{
+                        data: [1791, 1330],
+                        backgroundColor: ['#10b981', '#f43f5e'],
+                        borderWidth: 0,
+                        hoverOffset: 6
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: 'bottom', labels: { font: { family: 'Inter', size: 11 } } },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    let total = 3121;
+                                    let value = context.raw;
+                                    let percentage = ((value / total) * 100).toFixed(2);
+                                    return ` ${context.label}: ${value} orang (${percentage}%)`;
+                                }
+                            }
+                        }
+                    },
+                    cutout: '68%'
+                }
+            });
+
+            // Bar Chart: Taburan Kategori Sekolah
+            const countCemerlang = rawSchoolData.filter(d => d.status === 'CEMERLANG').length;
+            const countSederhana = rawSchoolData.filter(d => d.status === 'SEDERHANA').length;
+            const countTindakan = rawSchoolData.filter(d => d.status === 'PERLU TINDAKAN').length;
+
+            const ctxBar = document.getElementById('categoryChart').getContext('2d');
+            new Chart(ctxBar, {
+                type: 'bar',
+                data: {
+                    labels: ['CEM (>80%)', 'SED (50-79%)', 'TIN (<50%)'],
+                    datasets: [{
+                        label: 'Bilangan Sekolah',
+                        data: [countCemerlang, countSederhana, countTindakan],
+                        backgroundColor: ['#10b981', '#f59e0b', '#f43f5e'],
+                        borderRadius: 8,
+                        barThickness: 45
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false }
+                    },
+                    scales: {
+                        y: { beginAtZero: true, grid: { borderDash: [4, 4] } },
+                        x: { grid: { display: false } }
+                    }
+                }
+            });
+        };
+    </script>
+</body>
+</html>
